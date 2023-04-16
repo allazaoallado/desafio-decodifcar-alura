@@ -92,12 +92,17 @@ textarea {
     
 }
 
-#centro{
-    text-align: ;
-}
+
 
 footer{
-    /* border: solid purple; */
+
     padding-top: 10px;
     text-align: center;
 }
+
+@media screen and (max-width: 480px) {
+        #escreva, #texto {
+            width: 100%;
+            height: auto;
+        }
+    }
