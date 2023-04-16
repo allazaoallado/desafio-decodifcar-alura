@@ -1,40 +1,6 @@
-input_gato = document.getElementById('input_gato')
-input_gato.addEventListener('input', function() {
-    this.value = this.value.toUpperCase();
-  });
-input_gato.addEventListener("keypress", function(event) {
-    const key = event.key.toLowerCase();
-    const accents = "áàãâäéèêëíìîïóòõôöúùûü";
-    
-    if (accents.includes(key)) {
-      event.preventDefault();
-    }
-  });
-
-input_humano = document.getElementById('input_humano')
-input_humano.addEventListener('input', function() {
-    this.value = this.value.toUpperCase();
-  });
-  
-button_gato = document.getElementById('button_gato')
-button_humano = document.getElementById('button_humano')
-
-p_gato = document.getElementById('p_gato')
-p_humano = document.getElementById('p_humano')
-
-
-
-function aumentarLetra(texto){
-    return texto.toLowerCase().split(' ').map(texto => texto.charAt(0).toLocaleUpperCase() + texto.slice(1)).join(' ');
-}
-
-
-
-
-
-
-
-
+window.addEventListener("load", function() {
+var teste = document.getElementById("texto").readOnly = true;
+});
 gatificar = () => {
     codificarTexto = (texto) =>{
 
@@ -70,52 +36,61 @@ gatificar = () => {
                   .replace('*', ' ')
 
       }
-    input = document.getElementById('input_gato')
-    p = document.getElementById('p_gato')
+    input = document.getElementById('escreva')
+    p = document.getElementById('texto')
 
-    return   p.innerHTML = `TEXTO: ${(codificarTexto(input.value))}`
+    return   p.innerHTML = `${(codificarTexto(input.value.toUpperCase()))}`
 }
 
 
 
 
 humanizar = () => {
-    codificarTexto = (texto) =>{
+  codificarTexto = (texto) =>{
 
-        return texto.replace(/!/g,'')
-                    .replace(/´/g,'')
-                    .replace(/miiiau/g, 'A')
-                    .replace(/miiaauu/g, 'B')
-                    .replace(/miaaaau/g, 'C')
-                    .replace(/miauuuu/g, 'D')
-                    .replace(/mmiauu/g , 'E')
-                    .replace(/miiauuu/g, 'F')
-                    .replace(/mmmiaau/g, 'G')
-                    .replace(/miaaau/g, 'H')
-                    .replace(/mmmiau/g, 'I')
-                    .replace(/miaauu/g, 'J')
-                    .replace(/mmiiaua/g, 'K')
-                    .replace(/miiaau/g , 'L')
-                    .replace(/miiaaamiu/g , 'M')
-                    .replace(/miauuu/g, 'N')
-                    .replace(/mmmiaaa/g, 'O')
-                    .replace(/miiaaau/g, 'P')
-                    .replace(/miaam/g, 'Q')
-                    .replace(/miiaaa/g, 'R')
-                    .replace(/miaaae/g, 'S')
-                    .replace(/miaiau/g, 'T')
-                    .replace(/mmiiaa/g, 'U')
-                    .replace(/miaaaa/g, 'V')
-                    .replace(/miaaeu/g, 'W')
-                    .replace(/miaou/g, 'X')
-                    .replace(/miiiaau/g, 'Y')
-                    .replace(/miaaiu/g, 'Z')
+    return texto.replace(/!/g,'')
+                .replace(/´/g,'')
+                .replace(/miiiau/g, 'A')
+                .replace(/miiaauu/g, 'B')
+                .replace(/miaaaau/g, 'C')
+                .replace(/miauuuu/g, 'D')
+                .replace(/mmiauu/g , 'E')
+                .replace(/miiauuu/g, 'F')
+                .replace(/mmmiaau/g, 'G')
+                .replace(/miaaau/g, 'H')
+                .replace(/mmmiau/g, 'I')
+                .replace(/miaauu/g, 'J')
+                .replace(/mmiiaua/g, 'K')
+                .replace(/miiaau/g , 'L')
+                .replace(/miiaaamiu/g , 'M')
+                .replace(/miauuu/g, 'N')
+                .replace(/mmmiaaa/g, 'O')
+                .replace(/miiaaau/g, 'P')
+                .replace(/miaam/g, 'Q')
+                .replace(/miiaaa/g, 'R')
+                .replace(/miaaae/g, 'S')
+                .replace(/miaiau/g, 'T')
+                .replace(/mmiiaa/g, 'U')
+                .replace(/miaaaa/g, 'V')
+                .replace(/miaaeu/g, 'W')
+                .replace(/miaou/g, 'X')
+                .replace(/miiiaau/g, 'Y')
+                .replace(/miaaiu/g, 'Z')
 
-                    
-    
-      }
-    input = document.getElementById('input_humano')
-    p = document.getElementById('p_humano')
-    return p.innerHTML = `TEXTO: ${codificarTexto(input.value.toLowerCase()).toUpperCase()}`
 
+  }
+input = document.getElementById('escreva')
+p = document.getElementById('texto')
+return p.innerHTML = `${codificarTexto(input.value.toLowerCase()).toUpperCase()}`
+}
+
+
+function copiarTexto() {
+  // Seleciona o conteúdo do textarea
+  const textarea = document.getElementById('texto');
+  textarea.select();
+  p = document.getElementById('texto')
+  // Copia o conteúdo selecionado para a área de transferência
+  document.execCommand('copy');
+  alert('Copiado!')
 }

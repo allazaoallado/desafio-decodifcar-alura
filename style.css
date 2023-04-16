@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400&display=swap');
+
+html{
+    background-color: #999999;
+}
+body{
+    font-family: 'Fredoka', sans-serif;
+}
+header{
+    /* border: solid red; */
+}
+
+header p {
+    display: inline-block;
+    font-size: 25px;
+    padding-left: 10px;
+    color: #0A3871;
+    text-decoration: underline;
+
+
+}
+
+header p a {
+    text-decoration: none;
+    color: #0A3871;
+
+}
+
+main{
+    border-radius: 1px;
+    background-color: #852d2d98;
+    border-radius: 5px;
+    border: solid #823939;
+
+}
+
+
+.area_texto{
+    /* border: solid green; */
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    
+}
+
+textarea {
+    font-size: 30px;
+    resize: none;
+   border-radius: 3px;
+  }
+
+#escreva{
+    width: 60%;
+    height: 400px;
+    background-color: #852d2d98;
+    
+}
+
+#texto {
+    width: 38.8%;
+    height: 400px;
+    background-image: url("IMG/PYh.gif");
+    background-size: 100% ;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #852d2d98;
+   cursor: pointer;
+    font-weight: bolder;
+  }
+
+.botoes{
+ width: 60.4%;
+ text-align: center;
+}
+
+.botoes p {
+    font-family: 'Inter', sans-serif;
+    display: inline-block;
+    border: 0.1px solid black;
+    padding: 10px 50px;
+    border-radius: 15px;
+}
+
+.botoes p:hover {
+    cursor: pointer;
+    background-color: #995050;
+    font-weight: bolder;
+    border: 2px;
+
+    
+}
+
+#centro{
+    text-align: ;
+}
+
+footer{
+    /* border: solid purple; */
+    padding-top: 10px;
+    text-align: center;
+}

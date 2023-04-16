@@ -6,17 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gatifique</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <input type="text" placeholder="Escreva" id="input_gato" >
-    <button onclick="gatificar()" id="button_gato">GATIFICAR</button>
-    <p id="p_gato">TEXTO:</p>
-    <br>
-    <br>
-    <br>
-    <input type="text" placeholder="Escreva" id="input_humano">
-    <button onclick="humanizar()" id="button_humano">HUMANIZAR</button>
-    <p id="p_humano">TEXTO:</p>
-    <script src="script.js"></script>
+
+    <header><img src="IMG/logo-alura.png" alt="logo da Alura"><p>Desafio de codificação da <strong><a href="https://www.alura.com.br/" target="_blank">Alura</a></strong></p></header>
+
+    <main>
+
+        <div class="area_texto">
+            <textarea  id="escreva" placeholder="ESCREVA"  spellcheck="false"></textarea>
+            <textarea id="texto" placeholder="TEXTO:"  readonly spellcheck="false" onclick="copiarTexto()"></textarea>
+            
+        </div>
+        
+
+        <div class="botoes">
+            <p onclick="gatificar()" class="centro">GATIFICAR</p>
+            <p  onclick="humanizar()">HUMANIZAR</p class = "centro">
+
+        </div>
+
+        </main>
+
+    <footer><p>desenvolvido por Allan Cordeiro</p></footer>
+
 </body>
 </html>
