@@ -34,7 +34,6 @@ main{
 
 
 .area_texto{
-    /* border: solid green; */
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -89,25 +88,8 @@ textarea {
     
 }
 
-
-
 footer{
 
     padding-top: 10px;
     text-align: center;
-}
-
-@media screen and (max-width: 480px) {
-        #escreva, #texto {
-            width: 100%;
-            height: auto;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        #escreva, #texto {
-          width: 100% !important;
-          height: 300px !important;
-          display: block !important;
-        }
 }
