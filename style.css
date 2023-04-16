@@ -7,9 +7,6 @@ html{
 body{
     font-family: 'Fredoka', sans-serif;
 }
-header{
-    /* border: solid red; */
-}
 
 header p {
     display: inline-block;
@@ -106,3 +103,11 @@ footer{
             height: auto;
         }
     }
+
+    @media screen and (max-width: 480px) {
+        #escreva, #texto {
+          width: 100% !important;
+          height: 300px !important;
+          display: block !important;
+        }
+}
