@@ -1,3 +1,14 @@
+function teste (){
+  document.addEventListener("DOMContentLoaded", function() {
+    p = document.getElementById('texto');
+    p.blur();
+  });
+}
+
+teste()
+
+
+
 window.addEventListener("load", function() {
 var teste = document.getElementById("texto").readOnly = true;
 });
@@ -38,16 +49,29 @@ gatificar = () => {
       }
     input = document.getElementById('escreva')
     p = document.getElementById('texto')
+    
 
-    return   p.innerHTML = `${(codificarTexto(input.value.toUpperCase()))}`
+    // return   p.innerHTML = `${(codificarTexto(input.value.toUpperCase()))}`
+  
+    p.innerHTML = ''; // Limpar qualquer conteúdo anterior
+
+    const textoCodificado = codificarTexto(input.value.toUpperCase());
+    let i = 0;
+    const intervalId = setInterval(() => {
+        p.innerHTML += textoCodificado.charAt(i);
+        i++;
+        if (i >= textoCodificado.length) {
+            clearInterval(intervalId);
+            // Remove o conteúdo digitado e adiciona o conteúdo final
+            p.innerHTML = p.innerHTML.replace(/_/g, '').replace('*', ' ');
+            p.innerHTML = p.innerHTML;
+        }
+    }, 50);
 }
 
 
-
-
 humanizar = () => {
-  codificarTexto = (texto) =>{
-
+  const codificarTexto = (texto) =>{
     return texto.replace(/!/g,'')
                 .replace(/´/g,'')
                 .replace(/miiiau/g, 'A')
@@ -76,21 +100,46 @@ humanizar = () => {
                 .replace(/miaou/g, 'X')
                 .replace(/miiiaau/g, 'Y')
                 .replace(/miaaiu/g, 'Z')
-
-
   }
-input = document.getElementById('escreva')
-p = document.getElementById('texto')
-return p.innerHTML = `${codificarTexto(input.value.toLowerCase()).toUpperCase()}`
+
+  const input = document.getElementById('escreva')
+  const p = document.getElementById('texto')
+  const textoCodificado = codificarTexto(input.value.toLowerCase()).toUpperCase()
+  let index = 0
+  p.innerHTML = ''
+  const escrever = () => {
+    if (index < textoCodificado.length) {
+      p.innerHTML += textoCodificado.charAt(index)
+      index++
+      setTimeout(escrever, 50)
+    }
+  }
+  escrever()
 }
 
 
+
+
+
 function copiarTexto() {
-  // Seleciona o conteúdo do textarea
   const textarea = document.getElementById('texto');
+  if(textarea.value == ''){alert('Nenhum texto foi copiado')}else{
+  // Seleciona o conteúdo do textarea
+
   textarea.select();
   p = document.getElementById('texto')
   // Copia o conteúdo selecionado para a área de transferência
   document.execCommand('copy');
+
   alert('Copiado!')
 }
+}
+
+limpar = () => {
+  p = document.getElementById('texto')
+  p.innerText = ''
+
+  input = document.getElementById('escreva')
+  input.value = ''
+
+} 
