@@ -230,4 +230,12 @@ main{
     width: 120px;
     margin-bottom: 3px;
 }
+
+.botoes li:hover{
+    background-color: #489CEB;
+}
+
+.botoes li:active{
+    background-color: #99CBFB;
+}
 }
