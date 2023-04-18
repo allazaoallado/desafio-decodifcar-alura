@@ -10,21 +10,28 @@
 </head>
 <body>
 
-    <header><img src="IMG/logo-alura.png" alt="logo da Alura"><p>Desafio de codificação da <strong><a href="https://www.alura.com.br/" target="_blank">Alura</a></strong></p></header>
+    <header>
+        <img src="IMG/logo-alura.png" alt="logo da Alura">
+        <h1>Desafio de codificação da <a href="https://www.alura.com.br/" target="_blank">Alura</a></h1>
+        <img src="IMG/1165910a5bfe08fb1969717715c225c55f6f7fd5_hq.gif" alt="" id="gatinho-escreva">
+        <img src="IMG/19wN.gif" alt="" id="gatinho-texto">
+    </header>
 
     <main>
 
         <div class="area_texto">
-            <textarea  id="escreva" placeholder="ESCREVA..."  spellcheck="false"></textarea>
+            <textarea  id="escreva" placeholder="ESCREVA SEU TEXTO AQUI..."  spellcheck="false"></textarea>
             <textarea id="texto" placeholder="TEXTO:"  readonly spellcheck="false" onclick="copiarTexto()"></textarea>
             
         </div>
         
 
         <div class="botoes">
-            <p onclick="gatificar()">GATIFICAR</p>
-            <p onclick="humanizar()">HUMANIZAR</p>
-            <p onclick="limpar()">LIMPAR</p>
+            <ul>
+            <li onclick="gatificar()">GATIFICAR</li>
+            <li onclick="humanizar()">HUMANIZAR</li>
+            <li onclick="limpar()">LIMPAR</li>
+            </ul>
 
         </div>
 

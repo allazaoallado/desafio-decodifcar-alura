@@ -111,7 +111,7 @@ humanizar = () => {
     if (index < textoCodificado.length) {
       p.innerHTML += textoCodificado.charAt(index)
       index++
-      setTimeout(escrever, 50)
+      teste = setTimeout(escrever, 50)
     }
   }
   escrever()
@@ -141,5 +141,6 @@ limpar = () => {
 
   input = document.getElementById('escreva')
   input.value = ''
+  clearInterval(teste)
 
 } 

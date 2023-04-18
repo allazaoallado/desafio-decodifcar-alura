@@ -2,31 +2,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400&display=swap');
 
 html{
-    background-color: #999999;
+    background-color: #99ccfbbd;
 }
 body{
     font-family: 'Fredoka', sans-serif;
+    color: #0A3871;
 }
 
-header p {
+
+header{
+    margin-left: 15px;
+    position: relative;
+}
+
+header h1 {
     display: inline-block;
     font-size: 25px;
     padding-left: 10px;
     color: #0A3871;
     text-decoration: underline;
+    position: relative;
+    bottom: 5px;
 }
 
-header p a {
+header h1 a {
     text-decoration: none;
     color: #0A3871;
 
 }
 
+header #gatinho-escreva{
+width: 90px;
+position: absolute;
+top: -18%;
+
+}
+header #gatinho-texto{
+
+    position: absolute;
+    left: 80%;
+
+}
+
 main{
     border-radius: 1px;
-    background-color: #852d2d98;
+    background-color: #489CEB;
     border-radius: 5px;
-    border: solid #823939;
+    border: solid #4B637A;
 
 }
 
@@ -41,28 +63,34 @@ main{
 textarea {
     font-size: 30px;
     resize: none;
-   border-radius: 3px;
+   
+   color: #0a3263;
+   border-color: #4B637A;
+   border-top: 0;
   }
 
 #escreva{
     width: 60%;
     height: 400px;
-    background-color: #852d2d98;
+    background-color: #99CBFB;
+    border-radius: 3px 0 3px 0;
     outline: none;
+    border-left: 0;
     
 }
 
 #texto {
     width: 38.8%;
     height: 400px;
-    /* background-image: url("IMG/PYh.gif"); */
     background-size: 100% ;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #852d2d98;
+    background-color: #99CBFB;
     cursor: pointer;
     outline: none;
+    border-right: 0;
+    border-radius: 0 3px 0 3px;
   }
 
 #texto::selection{
@@ -73,28 +101,133 @@ textarea {
 .botoes{
  width: 60.4%;
  text-align: center;
+
 }
 
-.botoes p {
+.botoes li {
     font-family: 'Inter', sans-serif;
     display: inline-block;
-    border: 0.1px solid black;
+    border: 0.1px solid #0A3871;
+    font-weight: bold;
     padding: 10px 50px;
     border-radius: 15px;
 }
 
-.botoes p:hover {
+.botoes li:hover {
     cursor: pointer;
-    background-color: #995050;
-    font-weight: bolder;
+    
+    background-color: #3E85C7;
+ 
     transition: 0.1s;
     transition-timing-function: ease-in;
     background-position: 100% 50%;
   
 }
 
+.botoes li:active{
+    background-color: #99ccfbbd;
+    border-color: #99ccfbbd;;
+    font-weight: bolder;
+    transition: 0.2s;
+}
+
+.botoes li::selection{
+    background: none;
+    color: inherit;
+}
+
 footer{
 
     padding-top: 10px;
     text-align: center;
+    font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 767px){
+
+
+    header{
+        border: solid;
+        margin: 0;
+        border-bottom: 0;
+        border-radius: 4px 4px 0 0;
+        background-color: #489CEB;
+        border-color: #4B637A;
+        padding: 5px;
+        position: a;
+    }
+
+
+header #gatinho-escreva{
+    width: 90px;
+    position: relative;
+    bottom: 13px;
+
+    
+    
+    }
+    header #gatinho-texto{
+    
+        position: static;
+        top: 26px;
+        left: 150px;
+    
+    }
+
+main{
+    border-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    
+}
+
+.area_texto{
+ 
+    display: inline;
+    border-right: 20px ;
+    border-top: 2px;
+
+    
+}
+
+#escreva{
+    width: 98.7%;
+    border-radius: 0;
+    border: 0;
+    border-right: 20px ;
+}
+
+#texto{
+
+    border-right: 20px ;
+    width: 98.7%;
+    border-radius: 0;
+    border-bottom: 2px ;
+    border-style: solid;
+    border-color: #4B637A;
+    border-right: 1px;
+    border-left: 1px;
+
+    
+   
+}
+
+.botoes{
+    text-align: center;
+    width: 100%;
+    
+
+}
+
+.botoes ul{
+    padding: 0;
+   
+}
+.botoes li{
+    width: 120px;
+    margin-bottom: 3px;
+}
 }
