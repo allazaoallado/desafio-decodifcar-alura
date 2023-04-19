@@ -98,19 +98,22 @@ textarea {
     color: inherit;
 }
 
-.botoes{
- width: 60.4%;
- text-align: center;
-
+.botoes ul{
+    display: inline-block;
+    padding: 0;
+    width: 60%;
+    text-align: center;
 }
 
 .botoes li {
     font-family: 'Inter', sans-serif;
     display: inline-block;
-    border: 0.1px solid #0A3871;
+    border: 1px solid #0A3871;
     font-weight: bold;
-    padding: 10px 50px;
-    border-radius: 15px;
+    padding: 12px;
+    border-radius: 18px;
+    width: 120px;
+    margin-left: 10px;
 }
 
 .botoes li:hover {
@@ -126,14 +129,29 @@ textarea {
 
 .botoes li:active{
     background-color: #99ccfbbd;
-    border-color: #99ccfbbd;;
+    border-color: #4B637A;
     font-weight: bolder;
     transition: 0.2s;
 }
 
+
+
 .botoes li::selection{
     background: none;
     color: inherit;
+}
+
+.texto-copia{
+    display: inline-block;
+    
+    width: 39.5%; 
+    text-align: center;
+}
+
+.texto-copia h2{
+    
+    display: inline;
+    margin-left: 5px;
 }
 
 footer{
@@ -215,20 +233,28 @@ main{
    
 }
 
+.texto-copia{
+    display: none;
+}
+
 .botoes{
     text-align: center;
     width: 100%;
+    
     
 
 }
 
 .botoes ul{
+
     padding: 0;
    
 }
 .botoes li{
-    width: 120px;
-    margin-bottom: 3px;
+
+    width: 180px;
+    margin-bottom: 5px;
+    border: 2px solid;
 }
 
 .botoes li:hover{

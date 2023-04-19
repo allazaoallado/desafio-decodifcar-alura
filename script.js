@@ -13,64 +13,65 @@ window.addEventListener("load", function() {
 var teste = document.getElementById("texto").readOnly = true;
 });
 gatificar = () => {
-    codificarTexto = (texto) =>{
+  codificarTexto = (texto) =>{
 
-        return texto.replace(/M/g, 'Miiaaamiu_!')
-                  .replace(/A/g, 'Miiiau_!')
-                  .replace(/B/g, 'Miiaauu_!')
-                  .replace(/C/g, 'Miaaaau_!')
-                  .replace(/Ç/g, 'Miaaaau_!')
-                  .replace(/D/g, 'Miauuuu_!')
-                  .replace(/E/g, 'Mmiauu_!')
-                  .replace(/F/g, 'Miiauuu_!')
-                  .replace(/G/g, 'Mmmiaau_!')
-                  .replace(/H/g, 'Miaaau_!')
-                  .replace(/I/g, 'Mmmiau_!')
-                  .replace(/J/g, 'Miaauu_!')
-                  .replace(/K/g, 'Mmiiaua_!')
-                  .replace(/L/g, 'Miiaau_!')
-                  .replace(/N/g, 'Miauuu_!')
-                  .replace(/O/g, 'Mmmiaaa_!')
-                  .replace(/P/g, 'Miiaaau_!')
-                  .replace(/Q/g, 'Miaam_!')
-                  .replace(/R/g, 'Miiaaa_!')
-                  .replace(/S/g, 'Miaaae_!')
-                  .replace(/T/g, 'Miaiau_!')
-                  .replace(/U/g, 'Mmiiaa_!')
-                  .replace(/V/g, 'Miaaaa_!')
-                  .replace(/W/g, 'Miaaeu_!')
-                  .replace(/X/g, 'Miaou_!')
-                  .replace(/Y/g, 'Miiiaau_!')
-                  .replace(/Z/g, 'Miaaiu_!')
-                  .replace(' ', '*')
-                  .replace(/_/g, '')
-                  .replace('*', ' ')
+      return texto.replace(/M/g, 'Miiaaamiu_!')
+                .replace(/A/g, 'Miiiau_!')
+                .replace(/B/g, 'Miiaauu_!')
+                .replace(/C/g, 'Miaaaau_!')
+                .replace(/Ç/g, 'Miaaaau_!')
+                .replace(/D/g, 'Miauuuu_!')
+                .replace(/E/g, 'Mmiauu_!')
+                .replace(/F/g, 'Miiauuu_!')
+                .replace(/G/g, 'Mmmiaau_!')
+                .replace(/H/g, 'Miaaau_!')
+                .replace(/I/g, 'Mmmiau_!')
+                .replace(/J/g, 'Miaauu_!')
+                .replace(/K/g, 'Mmiiaua_!')
+                .replace(/L/g, 'Miiaau_!')
+                .replace(/N/g, 'Miauuu_!')
+                .replace(/O/g, 'Mmmiaaa_!')
+                .replace(/P/g, 'Miiaaau_!')
+                .replace(/Q/g, 'Miaam_!')
+                .replace(/R/g, 'Miiaaa_!')
+                .replace(/S/g, 'Miaaae_!')
+                .replace(/T/g, 'Miaiau_!')
+                .replace(/U/g, 'Mmiiaa_!')
+                .replace(/V/g, 'Miaaaa_!')
+                .replace(/W/g, 'Miaaeu_!')
+                .replace(/X/g, 'Miaou_!')
+                .replace(/Y/g, 'Miiiaau_!')
+                .replace(/Z/g, 'Miaaiu_!')
+                .replace(' ', '*')
+                .replace(/_/g, '')
+                .replace('*', ' ')
 
-      }
-    input = document.getElementById('escreva')
-    p = document.getElementById('texto')
-    
-
-    // return   p.innerHTML = `${(codificarTexto(input.value.toUpperCase()))}`
+    }
+  input = document.getElementById('escreva')
+  p = document.getElementById('texto')
   
-    p.innerHTML = ''; // Limpar qualquer conteúdo anterior
 
-    const textoCodificado = codificarTexto(input.value.toUpperCase());
-    let i = 0;
-    const intervalId = setInterval(() => {
-        p.innerHTML += textoCodificado.charAt(i);
-        i++;
-        if (i >= textoCodificado.length) {
-            clearInterval(intervalId);
-            // Remove o conteúdo digitado e adiciona o conteúdo final
-            p.innerHTML = p.innerHTML.replace(/_/g, '').replace('*', ' ');
-            p.innerHTML = p.innerHTML;
-        }
-    }, 50);
+  // return   p.innerHTML = `${(codificarTexto(input.value.toUpperCase()))}`
+
+  p.innerHTML = ''; // Limpar qualquer conteúdo anterior
+
+  const textoCodificado = codificarTexto(input.value.toUpperCase());
+  let i = 0;
+  intervalId = setInterval(() => {
+      p.innerHTML += textoCodificado.charAt(i);
+      i++;
+      if (i >= textoCodificado.length) {
+          clearInterval(intervalId);
+          // Remove o conteúdo digitado e adiciona o conteúdo final
+          p.innerHTML = p.innerHTML.replace(/_/g, '').replace('*', ' ');
+          p.innerHTML = p.innerHTML;
+      }
+  }, 50);
 }
 
 
 humanizar = () => {
+  
   const codificarTexto = (texto) =>{
     return texto.replace(/!/g,'')
                 .replace(/´/g,'')
@@ -136,11 +137,10 @@ function copiarTexto() {
 }
 
 limpar = () => {
-  p = document.getElementById('texto')
-  p.innerText = ''
-
+  p = document.getElementById('texto');
+  p.innerHTML = '';
+  clearInterval(intervalId);
+  clearInterval(teste)
   input = document.getElementById('escreva')
   input.value = ''
-  clearInterval(teste)
-
-} 
+}
