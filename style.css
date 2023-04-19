@@ -248,13 +248,16 @@ main{
 .botoes ul{
 
     padding: 0;
-   
+    text-align: center;
+    width: 100%;
 }
 .botoes li{
 
     width: 180px;
     margin-bottom: 5px;
     border: 2px solid;
+
+
 }
 
 .botoes li:hover{
